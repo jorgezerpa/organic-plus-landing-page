@@ -184,3 +184,40 @@ window.addEventListener('resize', ()=>{
 
 
 
+//slider
+const slider = document.querySelector('.slider');
+const sliderItem = document.querySelectorAll('.slider__item');
+const slideLeft = document.querySelector('.slide.slide-left');
+const slideRight = document.querySelector('.slide.slide-right');
+
+let counter = 0;
+
+slideRight.addEventListener('click', ()=>{
+    counter++;
+    if(counter === sliderItem.length) counter=0;     
+    sliderItem.forEach(item=>{
+        item.style.transform = `translateX(${-100*counter}%)`;
+        console.log(counter)
+    })
+})
+slideLeft.addEventListener('click', ()=>{
+    counter--;
+    if(counter<0) counter=sliderItem.length-1;     
+    sliderItem.forEach(item=>{
+        item.style.transform = `translateX(-${100*counter}%)`;
+    })
+    console.log(counter)
+})
+
+
+
+
+
+
+// slideLeft.addEventListener('click', ()=>{
+//     sliderItem.forEach(item=>{
+//         item.style.transform = `translateX(-${100*counter}%)`;
+//     })
+//     counter++;
+//     if(counter === sliderItem.length) counter=0;     
+// })
