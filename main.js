@@ -44,7 +44,8 @@ sectionTwoCards.forEach((card, index)=>{
     let direction = index%2===0 ? 'flexend' : 'row__reverse flexstart'; 
     let justify = index%2!==0 ? 'flexend' : 'flexstart'; 
     let padding_left = index===2 ? 'padding_left' : '';   
-    let third = index===2 ? 'third' : '';   
+    let third = index===2 ? 'third' : ''; 
+    let textAlign = index%2 == 0 ?'left': 'right';  
 
     sectionTwo.innerHTML += `
     <div class="grid__item">
@@ -53,8 +54,8 @@ sectionTwoCards.forEach((card, index)=>{
                 <img class='section-two__image ${third}' src="${card.image}" alt="">
             </div>
             <div class="card__content ${padding_left}">
-                <h3>${card.title}</h3>
-                <p>${card.text}</p>
+                <h3 class='${textAlign}'>${card.title}</h3>
+                <p class='${textAlign}'>${card.text}</p>
             </div>
         </div>
     </div>
@@ -141,7 +142,7 @@ const fixedButtonButton = document.querySelector('.sticky-button');
 
 const changeFixedButtonColor = (entries, observer)=>{
     entries.forEach(entrie=>{
-        fixedButtonButton.style.backgroundColor =  entrie.isIntersecting ? 'rgba(162, 193, 43,1)' : '#ED4B76';  
+        fixedButtonButton.style.backgroundColor =  entrie.isIntersecting ? 'rgba(162, 193, 43,1)' : 'rgba(233,70,117)';  
     })
 }
 const observerFixedButtonColor = new IntersectionObserver(changeFixedButtonColor, {

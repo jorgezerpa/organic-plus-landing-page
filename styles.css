@@ -5,13 +5,23 @@
 }
 
 @font-face {
-    font-family: Montserrat;
-    src: url(./assets/fonts/montserrat.ttf);
+    font-family: Poppins;
+    src: url(./assets/fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url(./assets/fonts/Montserrat/static/Montserrat-Bold.ttf);
 }
 @font-face {
-    font-family: Poppins;
-    src: url(./assets/fonts/Poppins-Light.ttf);
+    font-family: MontserratExtraBold;
+    src: url(./assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf);
 }
+@font-face {
+    font-family: MontserratLight;
+    src: url(./assets/fonts/Montserrat/static/Montserrat-Light.ttf);
+}
+
 
 
 :root{
@@ -29,7 +39,7 @@
                 GENERAL
 ------------------------------------------ */
 body{
-    font-family: Montserrat;
+    font-family: Poppins;
     letter-spacing: .4px;
     position: relative;
     max-width: 100%;
@@ -39,17 +49,23 @@ main{
     overflow-x: hidden;
     width: 100%;
 }
-h1{}
-h2{}
+
+h1{
+
+}
+h2{
+
+}
 h3{
     color: var(--color-one);
+    font-weight: 800;
 }
 h4{}
 h5{}
 h6{}
 p{
-    font-family: 'Poppins', sans-serif;
     text-align: center;
+    font-family: Poppins;
 }
 span{}
 i{}
@@ -147,6 +163,16 @@ a{
 
 
 
+.bold{
+    font-family: MontserratBold;
+}
+.extraBold{
+    font-family: MontserratExtraBold;
+}
+.light{
+    font-family: MontserratLight;
+}
+
 
 
 /* ------------------------------------------
@@ -221,10 +247,11 @@ header{
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 50px;
 }
 .section-one .grid__item{
     position: relative;
-    width: 25%;
+    width: 20%;
 }
 
 
@@ -237,15 +264,22 @@ header{
     padding: 10px;    
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .section-one .card__media{
     position: relative;
     width: 100%;
+    height: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 40px;
 } 
+.section-one .card__media img{
+    position: absolute;
+    height: 100%;
+} 
+
 .section-one .card__content{
     position: relative;
     width: 100%;
@@ -274,7 +308,7 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 .row__reverse{
     flex-direction: row-reverse;
@@ -282,7 +316,7 @@ header{
 .section-two .card__media{
     transition: 1s all;
     position: relative;
-    width: 250px;
+    /* width: 250px; */
     display: flex;
 }
 .section-two .card__media.right{
@@ -304,7 +338,7 @@ header{
 }
 .section-two .card__content{
     position: relative;
-    width: 60%;
+    width: 40%;
 }
 .section-two .card__content h3{
     font-size: 1.7rem;
@@ -313,9 +347,16 @@ header{
 .section-two .card__content p{
     text-indent: 15px;
 }
-.padding_left{
-    padding-left: 100px;
+.section-two .card__content p.left, .section-two .card__content h3.left{
+    text-align: left;
 }
+.section-two .card__content p.right, .section-two .card__content h3.right{
+    text-align: right;
+}
+
+/* .padding_left{
+    padding-left: 100px;
+} */
 
 
 
@@ -328,12 +369,18 @@ header{
     color: var(--color-white);
     margin-top: 100px;
 }
+.section-three h2:nth-of-type(1){
+    margin: 0;
+}
 .section-three .grid__item{
-    padding-top: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
+}
+.section-three .grid__item:nth-of-type(1){
+    padding-top: 50px;
 }
 .section-three__price{
     font-size: 2.4rem;
@@ -356,6 +403,9 @@ header{
 .section-four>h2{
     text-align: center;
     padding: 20px;
+    padding-top: 0;
+    transform: translate(0, -40px);
+    font-weight: 600;
 }
 .slider{
     overflow: hidden;
@@ -492,6 +542,10 @@ footer img{
         padding-right: 10px;
         margin-top: 50px;
     }
+
+    .section-four>h2{
+        transform: translate(0, -20px);
+    }
 }
 
 
@@ -567,6 +621,11 @@ footer img{
         text-align: center;
         padding: 0 10px;
     }
+    .section-three__title{
+        font-weight: 300;
+    }
+
+
     .section-three__price{
         font-size: 1.8rem;
     }
@@ -583,6 +642,9 @@ footer img{
 
     
 
+    .section-four>h2{
+        transform: translate(0, 0);
+    }
     .slider{
         width: 90%;
     }
