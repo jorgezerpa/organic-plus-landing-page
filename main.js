@@ -61,7 +61,6 @@ sectionTwoCards.forEach((card, index)=>{
     `;
 
     slideDirection === 'right' ? slideDirection='left': slideDirection='right';
-            console.log(slideDirection)
 })
 
 
@@ -197,7 +196,6 @@ slideRight.addEventListener('click', ()=>{
     if(counter === sliderItem.length) counter=0;     
     sliderItem.forEach(item=>{
         item.style.transform = `translateX(${-100*counter}%)`;
-        console.log(counter)
     })
 })
 slideLeft.addEventListener('click', ()=>{
@@ -206,7 +204,6 @@ slideLeft.addEventListener('click', ()=>{
     sliderItem.forEach(item=>{
         item.style.transform = `translateX(-${100*counter}%)`;
     })
-    console.log(counter)
 })
 
 
