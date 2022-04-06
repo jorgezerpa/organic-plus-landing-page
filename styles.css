@@ -184,10 +184,10 @@ header{
     background: var(--color-three-dark);
 }
 .logo{
-    width: 100px;
+    width: 130px;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 40px;
     z-index: 100000;
 }
 .logo img{
@@ -563,6 +563,11 @@ footer img{
         display: flex;
         justify-content: center;
     }
+    .logo{
+        width: 100px;
+        top: 20px;
+        left: 20px;
+    }
     .hero__background{
         width: 100%;
         min-height: 100%;
@@ -571,7 +576,7 @@ footer img{
     }
     .hero__background img{
         width: 100%;
-        transform: translateY(-180px);
+        /* transform: translateY(-180px);< */
     }
     .hero__content div h1{
         font-size: 1.6rem;

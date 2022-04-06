@@ -177,9 +177,10 @@ observerFixedButtonDisappear.observe(sectionThree);
 //change header Image
 const headerImage = document.querySelector('.hero__background img');
  
-headerImage.src = window.innerWidth < 600 ? './assets/images/header_vertical.png' : './assets/images/header.png' ;
+headerImage.src = window.innerWidth < 600 ? './assets/images/header_vertical-med.png' : './assets/images/header.png' ;
 window.addEventListener('resize', ()=>{
-    headerImage.src = window.innerWidth < 600 ? './assets/images/header_vertical.png' : './assets/images/header.png' ;
+    headerImage.src = window.innerWidth < 600 ? './assets/images/header_vertical-med.png' : './assets/images/header.png' ;
+    if(window.innerWidth<400) headerImage.src = './assets/images/header_vertical.png'
 })
 
 
